@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kasir WiFi Offline</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="container">
+    <h1>🧾 SISTEM KASIR TOMIHONK</h1>
+
+    <!-- Form Tambah Produk -->
+    <div class="form-group">
+      <input type="text" id="nama" placeholder="Nama Pelanggan">
+      <input type="number" id="harga" placeholder="Harga Produk (Rp)">
+      <button onclick="tambahProduk()">+ Tambah Produk</button>
+    </div>
+
+    <!-- Daftar Produk -->
+    <ul id="daftar-produk"></ul>
+
+    <!-- Total dan Data Pelanggan -->
+    <div class="total">Total: <span id="total">Rp0</span></div>
+
+    <div class="form-group">
+      <input type="text" id="alamat" placeholder="Alamat Pelanggan">
+      <input type="number" id="bayar" placeholder="Dibayar (Rp)">
+      <button onclick="selesaikanTransaksi()">💾 Selesaikan Transaksi</button>
+    </div>
+
+    <!-- Filter Riwayat -->
+    <div class="form-group">
+      <input type="date" id="filter-tanggal">
+      <button onclick="filterHistori()">🔍 Filter</button>
+    </div>
+
+    <!-- Aksi -->
+    <div class="actions">
+      <button onclick="eksporCSV()">📁 Ekspor CSV</button>
+      <button onclick="cetakStruk()">🖨️ Cetak Struk</button>
+    </div>
+
+    <!-- Riwayat Transaksi -->
+    <h2>Riwayat Transaksi</h2>
+    <ul id="histori-transaksi"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
